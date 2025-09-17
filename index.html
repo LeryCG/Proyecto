@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!--
+		  Este archivo HTML es la estructura principal de la página web del proyecto.
+		  Incluye las secciones básicas: encabezado, contenido principal y pie de página.
+		  A continuación se explican las partes más importantes y se añaden sugerencias de mejora.
+		-->
 		<meta charset="UTF-8" />
+		<!--
+		  <meta name="viewport" ... />
+		  Hace que la web sea responsive, adaptándose a diferentes tamaños de pantalla.
+		-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--
+		  <title>...</title>
+		  Título que aparece en la pestaña del navegador.
+		-->
 		<title>My Web Project - WEB ATELIER (UDIT)</title>
+		<!--
+		  <meta name="description" ... />
+		  Descripción para SEO y accesibilidad.
+		-->
 		<meta name="description" content="A student web project for WEB ATELIER (UDIT) course" />
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<!--
+		  <link rel="stylesheet" ... />
+		  Enlaza la hoja de estilos CSS para el diseño visual.
+		-->
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<!--
+		  Sugerencia: Añadir favicon para mejorar la identidad visual.
+		  <link rel="icon" href="favicon.ico" />
+		-->
 	</head>
 	<body>
+		<!--
+		  Enlace de salto para accesibilidad, permite a usuarios de teclado ir directo al contenido principal.
+		-->
 		<a href="#main" class="skip-link">Skip to main content</a>
 
 		<header>
 			<div class="container">
+				<!--
+				  Título principal del sitio.
+				-->
 				<h1>My Web Project</h1>
 				<p>Student Project - WEB ATELIER (UDIT)</p>
 			</div>
@@ -38,6 +69,9 @@
 				<h2>Weekly Progress</h2>
 				<p>
 					Check my
+					<!--
+					  Sugerencia: Reemplazar [username] y [project-repo] por los valores reales para que el enlace funcione.
+					-->
 					<a href="https://github.com/[username]/[project-repo]/commits/main">commit history</a>
 					to see weekly progress.
 				</p>
@@ -46,6 +80,9 @@
 
 		<footer>
 			<div class="container">
+				<!--
+				  Sugerencia: Reemplazar [Your Name] por tu nombre real.
+				-->
 				<p>© 2025 [Your Name] — WEB ATELIER (UDIT) · Web Design (2025 Fall).</p>
 				<p>
 					<a href="https://github.com/ruvebal/web-atelier-udit">Course Framework</a>
@@ -55,6 +92,9 @@
 			</div>
 		</footer>
 
+		<!--
+		  Enlace al archivo JavaScript principal. Sugerencia: Añadir funcionalidades interactivas en assets/js/main.js.
+		-->
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
