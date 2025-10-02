@@ -1,144 +1,69 @@
-/* WEB ATELIER (UDIT) - Student Project Template Styles */
-
-/* Reset and base styles */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	font-size: 16px;
-	line-height: 1.6;
-	scroll-behavior: smooth;
-}
-
-body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-	color: #333;
-	background-color: #dea7f8;
-	margin: 0;
-	padding: 0;
-}
-
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 600;
-	line-height: 1.3;
-	margin: 0 0 1rem 0;
-}
-
-h1 {
-	font-size: 2.5rem;
-}
-h2 {
-	font-size: 2rem;
-}
-h3 {
-	font-size: 1.5rem;
-}
-
-p,
-li {
-	margin-bottom: 1rem;
-}
-
-/* Layout */
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-
-main {
-	min-height: 80vh;
-	padding: 2rem 0;
-}
-section {
-    height: 90vh;
-}
-/* Header */
 header {
-	background: #c0e0ff;
-	padding: 1rem 0;
-	border-bottom: 1px solid #e9ecef;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* Footer */
-footer {
-	background: #f8f9fa;
-	padding: 2rem 0;
-	margin-top: 4rem;
-	border-top: 1px solid #e9ecef;
-	font-size: 0.875rem;
-	color: #6c757d;
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
-
-footer a {
-	color: #007bff;
-	text-decoration: none;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-
-footer a:hover {
-	text-decoration: underline;
+nav ul li {
+  margin-right: 1rem;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-	html {
-		font-size: 14px;
-	}
-
-	.container {
-		padding: 0 0.5rem;
-	}
-
-	h1 {
-		font-size: 2rem;
-	}
-	h2 {
-		font-size: 1.75rem;
-	}
-	h3 {
-		font-size: 1.25rem;
-	}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
 }
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+html {
+  scroll-behavior: smooth;
 }
-
-/* Focus styles for keyboard navigation */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-	outline: 2px solid #007bff;
-	outline-offset: 2px;
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #007acc;
+  outline: none;
 }
-
-/* Skip link for screen readers */
-.skip-link {
-	position: absolute;
-	top: -40px;
-	left: 6px;
-	background: #000;
-	color: #ffffff;
-	padding: 8px;
-	text-decoration: none;
-	border-radius: 4px;
-	z-index: 1000;
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  color: #fff;
 }
-
-.skip-link:focus {
-	top: 6px;
+.title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 2s forwards ease-in;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid currentColor;
+  animation: typing 3s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
 }
