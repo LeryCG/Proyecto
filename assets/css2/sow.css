@@ -1,0 +1,115 @@
+/* Header bar flex alignment */
+.header-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.back-button {
+  font-size: 2rem;
+}
+/* Sticky Menu */
+header {
+  background: #efefef;
+  box-shadow: 0 0px 5px #efefef;
+  position: fixed;
+  top: 0;
+  left: 5;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-right: 1rem;
+  padding: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #da0000;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #007acc;
+  outline: none;
+}
+
+/* (Optional) animated cover */
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  color: #fff;
+}
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid currentColor;
+  animation: typing 3s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+.titulo-personalizado {
+  color: rgb(187, 0, 0);
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 0rem;
+  padding: 7rem; /* espacio interno */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    /* https://stackoverflow.com/a/79391822 */
+    width: calc-size(auto, size);
+  }
+}
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Section Styling */
+section {
+  padding: 2rem;
+}
+.row {
+  padding: 1rem 0;
+}
+
+/* Analysis Summary Styling */
+/* .analysis-text {
+  columns: 1;
+  column-gap: 2rem;
+}
+@media (min-width: 800px) {
+  .analysis-text {
+    columns: 2;
+  }
+} */
+.button-analysis {
+  border: 4px solid black;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: green;
+  text-align: center;
+}
+.button-analysis:hover {
+  background-color: blue;
+  color: white;
+}
