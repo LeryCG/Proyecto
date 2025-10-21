@@ -81,6 +81,7 @@ button {
  border: none;
  padding: 0.9rem 2rem;
  margin: auto;
+ margin-bottom: 0rem;
  font-family: inherit;
  font-size: inherit;
  position: relative;
@@ -152,6 +153,16 @@ section {
   border-radius: 0rem;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+h2 { 
+  color: #5c2e14;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 0rem;
+  padding: 5rem 2rem;
+  padding-top: 3rem;
+ margin: auto;
 }
 .titulo-personalizado {
   color: #5c2e14;
