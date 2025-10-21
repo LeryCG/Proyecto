@@ -1,11 +1,18 @@
-header {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.header-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-nav {
+/* Sticky Menu */
+header {
+  background: #f3e1c5;
+  box-shadow: 0 0px 5px #f3e1c5;
   position: fixed;
   top: 0;
+  left: 5;
+  width: 100%;
   z-index: 1000;
+  padding: 1rem;
 }
 nav ul {
   list-style: none;
@@ -15,64 +22,78 @@ nav ul {
 }
 nav ul li {
   margin-right: 1rem;
+  padding: 0rem;
 }
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #5c2e14;
 }
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #007acc;
+  color: #da0000;
   outline: none;
 }
+/* (Optional) animated cover */
 .cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #222;
-  color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 85vh;
+	background: #5c2e14;
+	color: #f3e1c5;
 }
 
 .title {
-	overflow: hidden;
-	white-space: nowrap;
-	border-right: 0.15em solid currentColor;
-	animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+  margin-top: 10rem;
+  display: inline-block; /* necesario para typing */
+  font-size: 3rem;
+  text-transform: none;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid currentColor;
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+max-width: fit-content;
 }
 @keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
+
 @keyframes blink-caret {
-	50% {
-		border-color: transparent;
-	}
+  50% {
+    border-color: transparent;
+  }
 }
+
+/*styling botón*/
+
 button {
  outline: none;
  cursor: pointer;
  border: none;
  padding: 0.9rem 2rem;
- margin: 0;
+ margin: auto;
  font-family: inherit;
  font-size: inherit;
  position: relative;
- display: inline-block;
+ display: block;
  letter-spacing: 0.05rem;
  font-weight: 700;
  font-size: 17px;
  border-radius: 500px;
  overflow: hidden;
- background: #66ff66;
- color: ghostwhite;
+ background:#85C7F2;
+ color:#f3e1c5;
+ text-decoration: none;
+ box-shadow: none;
 }
 
 button span {
@@ -82,7 +103,7 @@ button span {
 }
 
 button:hover span {
- color: black;
+ color: #5c2e14;
 }
 
 button::before,
@@ -97,7 +118,7 @@ button::after {
 
 button::before {
  content: "";
- background: #000;
+ background:#5c2e14;
  width: 120%;
  left: -10%;
  transform: skew(30deg);
@@ -108,71 +129,57 @@ button:hover::before {
  transform: translate3d(100%, 0, 0);
 }
 
-header {
-	background: #fff;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Section Styling */
+section {
+  padding: 1.5rem;
 }
-nav {
-	position: sticky;
-	top: 0;
-	z-index: 1000;
+.row {
+  padding: 2rem 0;
+  margin: 3rem 0;
 }
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
+.copyright-row {
+	font-size: small;
+  padding-left: 1.5rem;
+	padding-top: 0rem;
 }
-nav ul li {
-	margin-right: 1rem;
+
+.col-md-6 {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 3rem auto;
+  border-radius: 0rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-nav ul li a {
-	text-decoration: none;
-	color: #333;
+.titulo-personalizado {
+  color: #5c2e14;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  height: 0rem;
+  padding: 0.9rem 2rem;
+ margin: auto;
 }
-html {
-	scroll-behavior: smooth;
+
+.subtitulo-personalizado {
+  color: #5c2e14;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  height: 0rem;
+  padding: 2rem; /* espacio interno */
 }
-nav ul li a:hover,
-nav ul li a:focus {
-	color: #007acc;
-	outline: none;
+.cover-image-chungiyoo {
+  background-image: url("https://ik.imagekit.io/Akoqito/Captura%20de%20pantalla%202025-10-15%20141113.png");
 }
-.cover {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background: #222;
-	color: #fff;
+.cover-image-gelato {
+  background-image: url("https://ik.imagekit.io/Akoqito/Captura%20de%20pantalla%202025-10-20%20134052.png?updatedAt=1760970524573");
 }
-.title {
-	font-size: 3rem;
-	text-transform: uppercase;
-	opacity: 0;
-	animation: fadeIn 2s forwards ease-in;
+.cover-image-kirifuda {
+  background-image: url("https://ik.imagekit.io/Akoqito/Captura%20de%20pantalla%202025-10-20%20160807.png");
 }
-@keyframes fadeIn {
-	to {
-		opacity: 1;
-	}
-}
-.title {
-	overflow: hidden;
-	white-space: nowrap;
-	border-right: 0.15em solid currentColor;
-	animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
-}
-@keyframes typing {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
-}
-@keyframes blink-caret {
-	50% {
-		border-color: transparent;
-	}
+.cover-image-gladeye {
+  background-image: url("https://ik.imagekit.io/Akoqito/img_0720.jpg?updatedAt=1760978785797");
 }
