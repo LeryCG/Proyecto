@@ -153,6 +153,15 @@ select:focus {
   align-items: center;
   gap: 0.5rem;
 }
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #68470a;
+  outline: none;
+}
 
 /* Navegación: lista horizontal sin puntos */
 nav ul {
@@ -272,36 +281,7 @@ button:hover::before {
 
 /* Botón "volver": estilo más pequeño y compacto */
 .back-button {
-  --button_radius: 0.35em;
-  --button_color: #5c2e14;
-  --button_outline_color: #f3e1c5;
-  --shadow-color: #b6a07e;
-  --highlight-color: #f3e1c5;
-  font-size: 14px; /* más pequeño */
-  font-weight: 700;
-  border: none;
-  border-radius: var(--button_radius);
-  background: #5c2e14;
-  box-shadow: 4px 4px 10px var(--shadow-color),
-    -4px -4px 10px var(--highlight-color);
-  cursor: pointer;
-
-  display: inline-block; /* ocupar sólo lo necesario */
-  box-sizing: border-box;
-  border: 1px solid var(--button_outline_color); /* borde más delgado */
-  padding: 0.45em 0.9em; /* menos espacio interno */
-  color: var(--button_outline_color);
-  transform: translateY(-0.1em);
-  transition: transform 0.12s ease;
-}
-
-/* Efecto hover para el botón volver (sutil) */
-.back-button:hover {
-  transform: translateY(-0.16em);
-}
-
-.back-button:active {
-  transform: translateY(0);
+  font-size: 2rem;
 }
 
 /* Secciones: padding general */
@@ -322,10 +302,10 @@ section {
 /* Columnas: ancho máximo y sombra */
 .col-md-6 {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   height: auto;
   display: block;
-  margin: 3rem auto;
+  margin: 2rem auto;
   border-radius: 0rem;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -350,8 +330,7 @@ h2 {
   font-size: 30px;
   text-align: center;
   height: 0rem;
-  padding: 0.9rem 2rem;
-  margin: 0rem;
+  padding: 3rem; /* espacio interno */
 }
 
 .subtitulo-personalizado {
@@ -359,11 +338,9 @@ h2 {
   font-weight: bold;
   font-size: 24px;
   text-align: center;
-  height: 2rem;
-  margin: 2rem;
+  height: 0rem;
   padding: 2rem; /* espacio interno */
 }
-
 /* Clases para imágenes de portada con background remoto */
 .cover-image-moooi {
   background-image: url("https://ik.imagekit.io/je2xkv8x3m/MOOOI?updatedAt=1761321362982");
@@ -377,3 +354,4 @@ h2 {
 .cover-image-juice {
   background-image: url("https://ik.imagekit.io/je2xkv8x3m/JUICE?updatedAt=1761321200927");
 }
+
