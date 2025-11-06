@@ -157,6 +157,18 @@ document.querySelectorAll('[data-observe]')
 
     <div class="info-overlay">
         <div>Scroll Progress: <strong><span id="progress">0</span>%</strong></div>
+        <div class="size-indicator">
+			<div><strong>Viewport:</strong></div>
+			<div>
+				Ancho:
+				<span id="viewport-width">689</span>
+				px
+			</div>
+			<div>
+				Categoría:
+				<span id="viewport-category">📱 Large Mobile</span>
+			</div>
+		</div>
     </div>
 
     <script>
@@ -203,6 +215,40 @@ document.querySelectorAll('[data-observe]')
         // Add smooth scroll behavior
         document.documentElement.style.scrollBehavior = 'smooth';
     </script>
+    <script>
+			// Variable font weight slider
+			const weightSlider = document.getElementById('weightSlider');
+			const weightDemo = document.getElementById('weightDemo');
+			const weightValue = document.getElementById('weightValue');
+
+			weightSlider.addEventListener('input', (e) => {
+				const weight = e.target.value;
+				weightDemo.style.fontWeight = weight;
+				weightValue.textContent = weight;
+			});
+
+			// Viewport size indicator
+			function updateViewportInfo() {
+				const width = window.innerWidth;
+				document.getElementById('viewport-width').textContent = width;
+
+				let category = '';
+				if (width < 640) category = '📱 Mobile';
+				else if (width < 768) category = '📱 Large Mobile';
+				else if (width < 1024) category = '📱 Tablet';
+				else if (width < 1280) category = '💻 Laptop';
+				else category = '🖥️ Desktop';
+
+				document.getElementById('viewport-category').textContent = category;
+			}
+
+			updateViewportInfo();
+			window.addEventListener('resize', updateViewportInfo);
+
+			// Log font metrics for debugging
+			console.log('Tipografía Web Moderna - Demo Cargado');
+			console.log('Fuentes activas:', document.fonts);
+		</script>
 
 </body>
 </html>
