@@ -103,7 +103,7 @@
         }
 
         .chapter-2 h2 {
-            color: #e74c3c;
+            color: #e9a098;
             font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
         }
@@ -114,7 +114,7 @@
         }
 
         .chapter-3 h2 {
-            color: #2ecc71;
+            color: #22864c;
             font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
         }
